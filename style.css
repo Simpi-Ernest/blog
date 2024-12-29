@@ -1,0 +1,355 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Trebuchet MS',
+     'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+      sans-serif;
+}
+
+html{
+    font-size: 75%;
+}
+h2{
+    font-size: 25px;
+
+}
+a{
+    text-decoration: none;
+    color: rgb(121, 113, 113);
+}
+span{
+    color: sandybrown;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.star{
+    width: 10px;
+    background: gold;
+}
+.icon,
+.icon-el{
+    width: 30px;
+}
+.active{
+    display: flex;
+    left: 0;
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+}
+button{
+    padding: 10px 20px;
+    color: sandybrown;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    border: 1px solid sandybrown;
+}
+button::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: red;
+    transition: .3s linear;
+    z-index: -1;
+}
+button:hover::before {
+    width: 100%;
+    left: 0;
+}
+button:hover{
+    color: white;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9vh;
+    background-color: rgb(221, 216, 208);
+    padding: 0px 50px;
+    box-shadow: 0 5px 5px rgb(187, 172, 172);
+    position: sticky;
+}
+
+ul{
+    display: flex;
+}
+li{
+    margin: 0px 30px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+li a:hover{
+    color: #272525;
+}
+.nav-bar .icon-el{
+    width: 16px;
+    font-size: 12px;
+    color: #3d3b3b;
+    display: none;
+}
+.main-el{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background: #ebe5e5;
+    min-height: 70vh;
+
+
+} 
+.main-content{
+    padding-top: 50px;
+}
+.main-el h2{
+    padding: 5px 0;
+    margin-bottom: 10px ;
+}
+.main-el p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+.img{
+    padding: 55px 0;
+    width: 200px;
+    height: auto;
+    position: relative;
+    user-select: none;
+    animation: rotate 10s infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+.special-part{
+    text-align: center;
+    padding: 40px 60px;
+    background: #f1eeee;
+}
+.special-part h2{
+    font-size: 30px;
+    padding: 20px 0;
+}
+.container-el{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+}
+.container-el .special-cont{
+  flex: 1 1 25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+  border: 1rem solid rgba(0,0,0,0.3);
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.container-el .special-cont .bakery{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;   
+   top: -100%; left: 0;
+}
+.container-el .special-cont .img-s{
+    text-align: center;
+    background: white;
+    padding: 2rem;
+}
+.container-el .special-cont .img-s img{
+    margin: 1.5rem;
+}
+.container-el .special-cont .img-s h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+.container-el .special-cont .img-s p{
+    font-size: 1.5rem;
+    color: #666;
+}
+.container-el .special-cont:hover .bakery{
+    top: 0;
+}
+.container-el .special-cont:hover .img-s{
+    transform: translateY(100%);
+}
+
+.service{
+    text-align: center;
+    padding: 40px 60px;
+    background: #e2e1e1;
+}
+.service h2{
+    padding-bottom: 50px;
+    font-size: 25px;
+    font-weight: 500px;
+}
+.service-el{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.service .service-el .service-card{
+    width: 200px;
+    height: auto;
+    display: block;
+    background: #fff;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    outline: 2px solid #faad96;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: all .3 ease;
+}
+.service .service-el .service-card:hover{
+    outline: 2px solid #b1e284;
+    transform: scale(1.1);
+
+}
+.service .service-el .service-card img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 160px;
+    left: 60px;
+    box-shadow: 0 5px 15px #faad96;
+    border-radius: 50%;
+}
+.service .service-el .service-card .service-fame{
+    padding: 40px 0 10px;
+    font-size: 10x;
+}
+.price{
+    padding: 5px 0;
+    color: gold;
+    font-size: 15px;
+}
+
+.deliveypro{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.deliverypt{
+    width: 190px;
+    padding: 20px 50px;
+    cursor: pointer;
+}
+.known{
+    min-height: vh;
+    text-align: center;
+    
+}
+.known-el{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  padding: 40px 30px;
+  margin: 0 20px;
+}
+.knowpt{
+    flex: 1 1 20rem;
+    text-align: center;
+    outline: 2px solid #faad96;
+    margin: 10px;
+    border-radius: 10px;  
+      background: white;
+    box-shadow: 5px 10px 10px 3px rgba(0,0,0,0.3);
+}
+
+.contact{
+    text-align: center;
+    background-image: url("pic/service1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 0;
+}
+.contact h2{
+    font-size: 25px;
+    color: #333;
+    margin: 30px;
+}
+.orderlist{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 20px 0;
+    justify-content: center;
+
+}
+
+.orderlist .order{
+    width: 30%;
+    border-radius: 15px;
+    padding: 20px 15px;
+    margin: 30px 0;
+    background: inherit;
+    filter: blur('5px');
+    border: 2px solid #443f3d;
+    box-shadow: 0px 5px 7px 5px #333130;
+    
+}
+.orderlist .order input{
+    background: #333;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 5px;
+    margin: 5px;
+    border-radius: 5px;
+    
+}
+
+
+
+
+
+
+@media screen and (max-width:948px){
+    .nav-bar .icon-el{
+        display: initial;
+        cursor: pointer;
+        min-height: 0;
+
+    }
+    ul{
+        display: flex; 
+        flex-direction: column;
+       position: absolute;
+       top: 100%; 
+       left: 0;
+       right: 0; 
+       background: #f7f7f7;
+       border-top: 1px solid rgba(0,0,0,0.1);
+       overflow: hidden;
+    }
+    li a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0,0.1);
+        border-left: .5rem solid salmon;
+        
+
+    }
+} 
+
